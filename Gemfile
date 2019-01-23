@@ -23,7 +23,7 @@ end
 group :development do
   gem 'sqlite3'
 end
-
+gem 'bundler', '~> 2.0', '>= 2.0.1'
 gem 'simple_form', '~> 4.1'
 gem 'hirb', '~> 0.7.3'
 gem 'paperclip', '~> 6.1'
