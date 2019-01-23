@@ -11,7 +11,19 @@ gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
 
 gem 'jquery-rails','~>4.3','>=4.3.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+
+
+
+group :production do
+  gem 'pg'
+end
+
+
+group :development do
+  gem 'sqlite3'
+end
+
 gem 'simple_form', '~> 4.1'
 gem 'hirb', '~> 0.7.3'
 gem 'paperclip', '~> 6.1'
