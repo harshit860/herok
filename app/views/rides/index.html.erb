@@ -5,7 +5,7 @@
 <div class="row-md-9">
 <% @rides.each do |ride| %>
 <div class="col-md-3">
-  <h4 class="bnr"><%= link_to ride.location , ride_path(ride) %></h4>  <!-- <a href="/rides/<%=ride.id %>"><%= image_tag ride.ride_img.url(:ride_index),class: "ride"%></a>-->
+  <h4 class="bnr"><%= link_to ride.location , ride_path(ride) %></h4>
   </div>
 <% end %>
 </div>
