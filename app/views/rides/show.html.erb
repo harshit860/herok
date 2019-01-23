@@ -1,0 +1,30 @@
+<div class="row">
+
+  <div class="col-md-4">
+
+    <h1>IMAGE</h1>
+
+  </div>
+
+   <div class="col-md-8">
+     <div class="rideinfo">
+    <h2 class="ridelocation"><%= @ride.location %> </h2>
+    <h3 class="bike"><%= @ride.bike %> </h3>
+    <p class="ridedesc"><%= @ride.description %></p>
+</div>
+</div>
+
+
+</div>
+
+
+<%= link_to "Back", root_path %>
+
+<% if user_signed_in? %>
+<% if @ride.user_id == current_user.id %>
+
+<%= link_to "Edit", edit_ride_path(@ride) %>
+<%= link_to "Delete", ride_path(@ride),method:  :delete, data: {confirm: "Are you sure? "} %>
+
+<% end %>
+<% end %>

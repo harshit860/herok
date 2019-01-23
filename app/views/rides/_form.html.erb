@@ -1,0 +1,9 @@
+<%= simple_form_for @ride, :html => {:multipart => true} do |f| %>
+<%= select_tag(:category_id, options_for_select(@categories), :prompt => "select a category") %>
+<%= f.file_field :ride_img %>
+  <%= f.input :location, label: "Ride Location" %>
+  <%= f.input :bike %>
+  <%= f.input :description %>
+
+  <%= f.button :submit %>
+<% end %>

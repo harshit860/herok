@@ -1,0 +1,12 @@
+<h1 class="currency-category"><%= params[:category] %></h1>
+<% if @rides.count == 0 %>
+<h1>YOU NEED A BIKE RIDE IMMEDIATELY</h1>
+<% else %>
+<div class="row-md-9">
+<% @rides.each do |ride| %>
+<div class="col-md-3">
+  <h4 class="bnr"><%= link_to ride.location , ride_path(ride) %></h4>  <!-- <a href="/rides/<%=ride.id %>"><%= image_tag ride.ride_img.url(:ride_index),class: "ride"%></a>-->
+  </div>
+<% end %>
+</div>
+<% end %>
